@@ -5,57 +5,63 @@ import NaturePeopleIcon from '@material-ui/icons/NaturePeople';
 import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+    bottomBorder : {
+        backgroundColor:"#F4D03F",
+        height:"5px",
+        width:"25%",
+        margin:"1.5rem auto"
+    },
+    icon : {
+        height:"50px",
+        width:"50px"
+    },
+    card : {
+        maxWidth : "225px",
+        maxHeight:"275px",
+        backgroundColor:"#51e2f5 ",
+        margin:"0.5rem",
+        boxShadow:"2px 3px 4px 4px black",
+        [theme.breakpoints.up('360')] : {
+            maxWidth:'320px'
+        }
+    },
+    cardContainer:{
+        minHeight:"50vh",
+        textAlign:"center",
+        letterSpacing:"1px",
+        backgroundColor:"transparent",
+        display: "flex",
+        alignItems:"center",
+        justifyContent:"center",
+        flexDirection: "column",
+    }
+}))
 
 const Services = () => {
-    const styles = {
-        bottomBorder : {
-            backgroundColor:"#F4D03F",
-            height:"5px",
-            width:"25%",
-            margin:"1.5rem auto"
-        },
-        icon : {
-            height:"50px",
-            width:"50px"
-        },
-        card : {
-            maxWidth : "225px",
-            maxHeight:"275px",
-            backgroundColor:"#51e2f5 ",
-            margin:"0.5rem",
-            boxShadow:"2px 3px 4px 4px black"
-        },
-        cardContainer:{
-            minHeight:"50vh",
-            textAlign:"center",
-            letterSpacing:"1px",
-            backgroundColor:"transparent",
-            display: "flex",
-            alignItems:"center",
-            justifyContent:"center",
-            flexDirection: "column",
-        }
-    }
+    const classes = useStyles()
     
     const [state,setState] = useState({
         services: [
             {
-               icon:  <LocalBarIcon style={styles.icon}/>,
+               icon:  <LocalBarIcon className={classes.icon}/>,
                title : "Best Cocktails",
                info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
             },
             {
-               icon:  <PoolIcon style={styles.icon}/>,
+               icon:  <PoolIcon className={classes.icon}/>,
                title : "Free Swimming",
                info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
             },
             {
-               icon:  <NaturePeopleIcon style={styles.icon}/>,
+               icon:  <NaturePeopleIcon className={classes.icon}/>,
                title : "Endless Hiking",
                info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
             },
             {
-               icon:  <AirportShuttleIcon style={styles.icon}/>,
+               icon:  <AirportShuttleIcon className={classes.icon}/>,
                title : "Free Shuttle",
                info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
             },
@@ -65,7 +71,7 @@ const Services = () => {
     
     const renderServices = state.services.map((item,index) => {
         return (
-            <Card key={index} style={styles.card}>
+            <Card key={index} className={classes.card}>
                 <CardContent>
                     {item.icon}
                     <h1 style={{fontSize:"1rem",margin:"1rem",textTransform:"capitalize"}}>{item.title}</h1>
@@ -78,8 +84,8 @@ const Services = () => {
     return (
         <div style={{backgroundColor:"#51e2f5",textAlign:"center"}}>
         <h1 style={{padding:"1rem",fontWeight:"900"}}>Services</h1>
-        <div style={styles.bottomBorder}></div>
-        <div style={styles.cardContainer}>
+        <div className={classes.bottomBorder}></div>
+        <div className={classes.cardContainer}>
             {renderServices}
         </div>
     </div>

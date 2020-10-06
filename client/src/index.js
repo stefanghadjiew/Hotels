@@ -1,13 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import { DatabaseProvider } from "./DatabaseContext";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DatabaseProvider>
+      <Router>
+        <App />
+      </Router>
+    </DatabaseProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
