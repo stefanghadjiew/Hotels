@@ -40,6 +40,10 @@ const useStyles = makeStyles((theme) =>({
         '&:hover' : {
             backgroundColor:'#51e2f5',
         }
+    },
+    link : {
+        textDecoration:'none',
+        color:'inherit'
     }
 }))
 
@@ -55,11 +59,18 @@ const Navbar = () => {
             {isOpen && ( 
                 <Drawer anchor={'top'} open={isOpen} onClose={handleMenu}>
                      <List>
-                        {[{text:'Home',icon:<HomeIcon/>},{text:'Hotels',icon:<HotelIcon/>},{text:'Reservations',icon:<DoneOutlineIcon/>}].map((item,index) => (
-                        <ListItem button key={index} >
-                            <ListItemIcon>{item.icon}</ListItemIcon>
-                            <ListItemText>{item.text}</ListItemText>
-                        </ListItem>
+                        {[
+                            {text:'Home',icon:<HomeIcon/>,link:'/'},
+                            {text:'Hotels',icon:<HotelIcon/>,link:'/hotels'},
+                            {text:'Reservations',icon:<DoneOutlineIcon/>,link:'/reservations'}
+                        ].map((item,index) => (
+                            <Link key={index} to={`${item.link}`} className={classes.link}>
+                                <ListItem button key={index}>
+                                    <ListItemIcon>{item.icon}</ListItemIcon>
+                                    <ListItemText>{item.text}</ListItemText>
+                                </ListItem>
+                            </Link>
+                        
                         ))}
                     </List>
                 </Drawer>

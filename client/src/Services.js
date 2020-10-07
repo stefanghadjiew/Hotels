@@ -6,6 +6,10 @@ import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from '@material-ui/core';
+import LanguageIcon from '@material-ui/icons/Language';
+import WifiIcon from '@material-ui/icons/Wifi';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
+import AccessibleIcon from '@material-ui/icons/Accessible';
 
 const useStyles = makeStyles((theme) => ({
     bottomBorder : {
@@ -63,6 +67,26 @@ const Services = () => {
             {
                icon:  <AirportShuttleIcon className={classes.icon}/>,
                title : "Free Shuttle",
+               info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
+            },
+            {
+               icon:  <LanguageIcon className={classes.icon}/>,
+               title : "Languages",
+               info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
+            },
+            {
+               icon:  <WifiIcon className={classes.icon}/>,
+               title : "Free Wi-Fi",
+               info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
+            },
+            {
+               icon:  <CreditCardIcon className={classes.icon}/>,
+               title : "Credit Cards",
+               info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
+            },
+            {
+               icon:  <AccessibleIcon className={classes.icon}/>,
+               title : "Accessibility",
                info : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tellus cursus, pellentesque sem quis, tempus nisi." 
             },
         ]

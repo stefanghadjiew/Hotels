@@ -1,5 +1,5 @@
 import React from 'react';
-import homeImage  from "./images/homeImage.jpg";
+import homeImage  from "./images/hotels/homeImage.jpg";
 import Button from "@material-ui/core/Button";
 
 
