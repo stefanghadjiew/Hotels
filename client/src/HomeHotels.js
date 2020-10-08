@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import HotelCard from './HotelCard';
 import { useHotels } from './DatabaseContext';
 
+
 const useStyles = makeStyles((theme) => ({
     bottomBorder : {
         backgroundColor:"#F4D03F",

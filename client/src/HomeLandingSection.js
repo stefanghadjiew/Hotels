@@ -1,7 +1,7 @@
 import React from 'react';
 import homeImage  from "./images/hotels/homeImage.jpg";
 import Button from "@material-ui/core/Button";
-
+import { Link } from 'react-router-dom';
 
 const HomeLandingSection = () => {
     const styles = {
@@ -44,7 +44,9 @@ const HomeLandingSection = () => {
         <div style={styles.second}>
             <h1>Time to find the hotel that will fulfil your every desire</h1>
             <div style={styles.bottomBorder}></div>
-            <Button size="large" variant="contained" style={styles.button}>Hotels</Button>
+            <Link style={{textDecoration:'none'}} to="/hotels">
+                <Button size="large" variant="contained" style={styles.button}>Hotels</Button>
+            </Link>
         </div>
     </div>
     )
