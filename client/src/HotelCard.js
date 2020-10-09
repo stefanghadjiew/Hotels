@@ -8,12 +8,12 @@ import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) =>({
     button : {
         color:"black",
-        backgroundColor:"#2E86C1", 
+        backgroundColor:"#51e2f5", 
         fontWeight:"bold",
         letterSpacing:"2px",
         width:'100%',
         '&:hover':{
-            backgroundColor:'#51e2f5 ',
+            backgroundColor:'#2E86C1'
         }
     },
     card : {

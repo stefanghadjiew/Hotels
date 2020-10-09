@@ -48,6 +48,10 @@ import presidential7 from './images/presidential/presidential7.jpg';
 import presidential8 from './images/presidential/presidential8.jpg';
 import presidential9 from './images/presidential/presidential9.jpg';
 import presidential10 from './images/presidential/presidential10.jpg';
+import reviewer1 from './images/reviewers/reviewer1.jpeg'
+import reviewer2 from './images/reviewers/reviewer2.jpg'
+import reviewer3 from './images/reviewers/reviewer3.jpeg'
+import reviewer4 from './images/reviewers/reviewer4.jpg'
 
 export default  {
     hotels : [
@@ -62,7 +66,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions: [],
             contacts:{
-                email:`City1@gmail.com`,
+                email:`ThePunisher@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -97,7 +101,32 @@ export default  {
                 breakfast:true,
                 pets:true
             },
-        ]
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [
+                {
+                    name: 'Person1',
+                    img : reviewer1,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person2',
+                    img : reviewer2,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person3',
+                    img : reviewer3,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person4',
+                    img : reviewer4,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                }
+            ]
             
         },
         {
@@ -111,7 +140,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City2@gmail.com`,
+                email:`Daredevil@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -146,7 +175,31 @@ export default  {
                 breakfast:true,
                 pets:true
             },
-        ]
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                    name: 'Person1',
+                    img : reviewer1,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person2',
+                    img : reviewer2,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person3',
+                    img : reviewer3,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person4',
+                    img : reviewer4,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                }
+            ]
         },
         {
             id:3,
@@ -159,7 +212,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City3@gmail.com`,
+                email:`Vengance@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -194,6 +247,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         },
         {
@@ -207,7 +284,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City4@gmail.com`,
+                email:`Stan@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -242,6 +319,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         },
         {
@@ -255,7 +356,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City5@gmail.com`,
+                email:`LooseYourself@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -290,6 +391,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         },
         {
@@ -303,7 +428,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City6@gmail.com`,
+                email:`WonderMan@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -338,6 +463,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         },
         {
@@ -351,7 +500,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City7@gmail.com`,
+                email:`LexCorp@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -386,6 +535,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         },
         {
@@ -399,10 +572,11 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City8@gmail.com`,
+                email:`Doomsday8@gmail.com`,
                 phone:'(123)456-789'
             },
-            rooms:[{
+            rooms:[
+            {
                 img:room22,
                 single:true,
                 price:'',
@@ -433,8 +607,32 @@ export default  {
                 size:'',
                 breakfast:true,
                 pets:true
-            },
-        ]
+            }
+            ],
+                description : 
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+
+                reviews : [{
+                    name: 'Person1',
+                    img : reviewer1,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person2',
+                    img : reviewer2,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person3',
+                    img : reviewer3,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                },
+                {
+                    name: 'Person4',
+                    img : reviewer4,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+                }
+            ]
         },
         {
             id:9,
@@ -447,7 +645,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City9@gmail.com`,
+                email:`Robin@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -482,6 +680,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         },
         {
@@ -495,7 +717,7 @@ export default  {
             checkout:'1 pm',
             specialOccasions:[],
             contacts:{
-                email:`City10@gmail.com`,
+                email:`TheCave0@gmail.com`,
                 phone:'(123)456-789'
             },
             rooms:[{
@@ -530,6 +752,30 @@ export default  {
                 breakfast:true,
                 pets:true
             },
+        ],
+            description : 
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula. Vivamus dignissim dui id neque ornare aliquam. Quisque arcu justo, gravida sit amet consectetur gravida, sollicitudin vitae justo. Sed eleifend velit a augue mollis, nec vehicula eros ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, ex vitae consectetur vulputate, felis nibh blandit quam, non tincidunt eros lectus eget neque. Etiam a lobortis magna. Nunc pulvinar dui in ante efficitur scelerisque.Suspendisse euismod sapien et ex euismod, in cursus ex mollis. Integer vel odio auctor, mattis ex et, rhoncus ante. Donec pretium tristique quam, in condimentum eros semper at.',
+            
+            reviews : [{
+                name: 'Person1',
+                img : reviewer1,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person2',
+                img : reviewer2,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person3',
+                img : reviewer3,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            },
+            {
+                name: 'Person4',
+                img : reviewer4,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam mi sed urna lobortis malesuada. Nulla varius, purus eget maximus tristique, quam sapien mollis enim, vitae efficitur neque mauris et ligula.'
+            }
         ]
         }
     ]

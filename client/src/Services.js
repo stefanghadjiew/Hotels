@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     cardContainer:{
         minHeight:"50vh",
         textAlign:"center",
-        letterSpacing:"1px",
+        letterSpacing:"0.5px",
         backgroundColor:"transparent",
         display: "flex",
         alignItems:"center",

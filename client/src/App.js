@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Hotels from './Hotels';
 import Hotel from './Hotel';
+import Rooms from './Rooms';
 
 /* import Rooms from "./Rooms";
 import Room from "./Room";
@@ -17,9 +18,9 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/hotels" component={Hotels}/>
         <Route exact path="/hotels/:hotelId"  component={Hotel}/>
-              {/* <Route exact path="/rooms" component={Rooms}/>
-              <Route exact path ="/rooms/:roomId" component={Room}/>
-              <Route component={Error}/>  */}
+        <Route exact path="/hotels/:hotelId/rooms" component={Rooms}/> 
+              {/* <Route exact path ="/rooms/:roomId" component={Room}/>
+              <Route component={Error}/>  */} 
         </Switch>
   </>
   );
