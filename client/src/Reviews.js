@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme)=> ({
 const Reviews = ({hotelToRender}) => {
     const classes = useStyles()
     const reviewers = hotelToRender.reviews.map((reviewer,index) =>(
-        <Accordion key={index} style={{marginTop:'2.5vw'}}>
+        <Accordion key={index}>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon/>}
             >

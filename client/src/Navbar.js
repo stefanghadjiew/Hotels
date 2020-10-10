@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) =>({
     nav : {
-        zIndex:"100",
+        zIndex:"102",
         display: "flex",
         position : "fixed",
         width: "100%",
