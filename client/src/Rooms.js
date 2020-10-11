@@ -70,6 +70,14 @@ const Rooms = () => {
         breakfast:false,
         pets:false,
     })
+    const [checkedBreakfast,setCheckedBreakfast] = useState(false)
+    const handleCheckedBreakfast = () => {
+        setCheckedBreakfast(!checkedBreakfast)
+    }
+    const [checkedPets,setCheckPets] = useState(false)
+    const handleCheckedPets = () => {
+        setCheckPets(!checkedPets)
+    }
     const classes = useStyles()
     const {allHotels} = useHotels()
     const urlArr = window.location.href.split('/')
@@ -81,28 +89,54 @@ const Rooms = () => {
     const getSize = (size) => {
         setState({...state,size})
     }
-   
+    const handleBreakfastClick = (e) => {
+        if(e.target.value !== state.breakfast) {
+            setState({...state,breakfast:!state.breakfast})
+        }
+    }
+    const handlePetsClick = (e) => {
+        if(e.target.value !== state.pets) {
+            setState({...state,pets:!state.pets})
+        }
+    }
     if(!currentHotel) {
         return null
     } else {
+        let rooms = currentHotel.rooms
         const price = currentHotel.rooms.map(hotel =>(hotel.price))
         const size = currentHotel.rooms.map(hotel => (hotel.size))
-        const roomsToRender =currentHotel.rooms.map((room,index) => (
-            <div style={{backgroundImage:`url(${room.img})`}} key={index} className={classes.room}>
-                <div className={classes.overlay}></div>
-                <div>
-                    <Button className={classes.button}>Room</Button>
+       
+            if(state.breakfast) {
+                rooms = rooms.filter(room => room.breakfast === state.breakfast)
+            }
+            if(state.pets) {
+                rooms = rooms.filter(room => room.pets === state.pets)
+            }
+            if(state.price) {
+                rooms = rooms.filter(room => room.price === state.price)
+            }
+            if(state.size) {
+                rooms = rooms.filter(room => room.size === state.size)
+            }
+            
+            const roomsToRender =rooms.map((room,index) => (
+                <div style={{backgroundImage:`url(${room.img})`}} key={index} className={classes.room}>
+                    <div className={classes.overlay}></div>
+                    <div>
+                        <Button className={classes.button}>Room</Button>
+                    </div>
                 </div>
-            </div>
-        )) 
+            ))
+        
+       
          return (
             <div className={classes.roomsWrapper}>
                 <div className={classes.inputWrapper}>
                     <RoomsInput input="Price" value={state.price} data={price} getPrice={getPrice}/>
                     <RoomsInput input="Size" value={state.size} data={size} getSize={getSize}/>
                     <FormControl>
-                        <FormControlLabel onChange={() => {setState({...state,breakfast:true})}} value={state.breakfast} control={<Radio />} label="breakfast"/>
-                        <FormControlLabel onChange={() => {setState({...state,pets:true})}} value={state.pets} control={<Radio />} label="pets"/>
+                        <FormControlLabel checked={checkedBreakfast} onClick={handleCheckedBreakfast} value={state.breakfast} control={<Radio onClick={handleBreakfastClick} />} label="breakfast"/>
+                        <FormControlLabel checked={checkedPets}  onClick={handleCheckedPets} value={state.pets} control={<Radio onClick={handlePetsClick}/>} label="pets"/>
                     </FormControl>
                 </div>
                 {roomsToRender} 
