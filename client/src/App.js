@@ -5,10 +5,8 @@ import Home from "./Home";
 import Hotels from './Hotels';
 import Hotel from './Hotel';
 import Rooms from './Rooms';
-
-/* import Rooms from "./Rooms";
 import Room from "./Room";
-import Error from "./Error";  */
+/* import Error from "./Error";   */
 
 function App() {
   return (
@@ -19,9 +17,9 @@ function App() {
         <Route exact path="/hotels" component={Hotels}/>
         <Route exact path="/hotels/:hotelId"  component={Hotel}/>
         <Route exact path="/hotels/:hotelId/rooms" component={Rooms}/> 
-              {/* <Route exact path ="/rooms/:roomId" component={Room}/>
-              <Route component={Error}/>  */} 
-        </Switch>
+        <Route exact path ="/hotels/:hotelId/rooms/:roomId" component={Room}/>
+            {/*   <Route component={Error}/> */}  
+      </Switch>
   </>
   );
 }

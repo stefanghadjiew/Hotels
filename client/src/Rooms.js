@@ -6,6 +6,7 @@ import RoomsInput from './RoomsInput';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Radio from '@material-ui/core/Radio';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) =>({
     roomsWrapper : {
@@ -71,13 +72,8 @@ const Rooms = () => {
         pets:false,
     })
     const [checkedBreakfast,setCheckedBreakfast] = useState(false)
-    const handleCheckedBreakfast = () => {
-        setCheckedBreakfast(!checkedBreakfast)
-    }
     const [checkedPets,setCheckPets] = useState(false)
-    const handleCheckedPets = () => {
-        setCheckPets(!checkedPets)
-    }
+   
     const classes = useStyles()
     const {allHotels} = useHotels()
     const urlArr = window.location.href.split('/')
@@ -92,11 +88,13 @@ const Rooms = () => {
     const handleBreakfastClick = (e) => {
         if(e.target.value !== state.breakfast) {
             setState({...state,breakfast:!state.breakfast})
+            setCheckedBreakfast(!checkedBreakfast)
         }
     }
     const handlePetsClick = (e) => {
         if(e.target.value !== state.pets) {
             setState({...state,pets:!state.pets})
+            setCheckPets(!checkedPets)
         }
     }
     if(!currentHotel) {
@@ -113,7 +111,7 @@ const Rooms = () => {
                 rooms = rooms.filter(room => room.pets === state.pets)
             }
             if(state.price) {
-                rooms = rooms.filter(room => room.price === state.price)
+                rooms = rooms.filter(room => room.price >= state.price)
             }
             if(state.size) {
                 rooms = rooms.filter(room => room.size === state.size)
@@ -123,7 +121,9 @@ const Rooms = () => {
                 <div style={{backgroundImage:`url(${room.img})`}} key={index} className={classes.room}>
                     <div className={classes.overlay}></div>
                     <div>
-                        <Button className={classes.button}>Room</Button>
+                        <Link style={{textDecoration:'none'}} to={`/hotels/${id}/rooms/${room.id}`}>
+                            <Button className={classes.button}>Room</Button>
+                        </Link>
                     </div>
                 </div>
             ))
@@ -132,14 +132,15 @@ const Rooms = () => {
          return (
             <div className={classes.roomsWrapper}>
                 <div className={classes.inputWrapper}>
-                    <RoomsInput input="Price" value={state.price} data={price} getPrice={getPrice}/>
+                    <RoomsInput input="Starting rice" value={state.price} data={price} getPrice={getPrice}/>
                     <RoomsInput input="Size" value={state.size} data={size} getSize={getSize}/>
                     <FormControl>
-                        <FormControlLabel checked={checkedBreakfast} onClick={handleCheckedBreakfast} value={state.breakfast} control={<Radio onClick={handleBreakfastClick} />} label="breakfast"/>
-                        <FormControlLabel checked={checkedPets}  onClick={handleCheckedPets} value={state.pets} control={<Radio onClick={handlePetsClick}/>} label="pets"/>
+                        <FormControlLabel checked={checkedBreakfast}  value={state.breakfast} control={<Radio onClick={handleBreakfastClick} />} label="breakfast"/>
+                        <FormControlLabel checked={checkedPets}   value={state.pets} control={<Radio onClick={handlePetsClick}/>} label="pets"/>
                     </FormControl>
                 </div>
-                {roomsToRender} 
+                {roomsToRender.length == 0 && <div>No match found...</div>}
+                {roomsToRender}
             </div> 
         )
     }
