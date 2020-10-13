@@ -9,6 +9,7 @@ import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import {Button} from '@material-ui/core';
+import Error from './Error';
 const useStyles = makeStyles((theme) => ({
     roomWrapper : {
         display: 'flex',
@@ -62,13 +63,18 @@ const useStyles = makeStyles((theme) => ({
         marginBottom:'2.5vw'
     },
     button : {
-        maxWidth:'250px',
+        width:'250px',
         fontWeight:"bold",
         backgroundColor:"#51e2f5",
         '&:hover':{
             backgroundColor:'#2E86C1'
         },
-        margin:'2.5vw 0'
+        margin:'2.5vw 0 auto'
+    },
+    buttonWrapper : {
+        display:'flex',
+        alignItems:'center',
+        justifyContent: 'center'
     }
 }))
 
@@ -78,14 +84,17 @@ const Room = () => {
     const currentHotelId=parseInt(window.location.href.split('/')[window.location.href.split('/').length-3])
     const currentHotelRoomId=parseInt(window.location.href.split('/')[window.location.href.split('/').length-1])
     const currentHotel = allHotels.filter(hotel => (hotel.id === currentHotelId))[0]
-   
+    if(isNaN(parseInt(window.location.href.split('/').pop() ))) {
+        return (<Error/>)
+    }
+    if(parseInt(window.location.href.split('/').pop()) < 0 || parseInt(window.location.href.split('/').pop()) > 4) {
+        return (<Error/>)
+    }
     
     if(!currentHotel) {
         return null
     } else {
         const currentHotelRoom = currentHotel.rooms.filter(room => room.id === currentHotelRoomId)
-        
-        
         return (
             <div className={classes.roomWrapper}>
                 <div className={classes.room} style={{backgroundImage:`url(${currentHotelRoom[0].img})`}}></div>
@@ -135,7 +144,9 @@ const Room = () => {
                         {currentHotelRoom[0].details}
                     </Typography>    
                 </div>
-                <Button className={classes.button}>Book Room</Button>
+                <div className={classes.buttonWrapper}>
+                    <Button className={classes.button}>Book Room</Button>
+                </div>
             </div>
         )
        

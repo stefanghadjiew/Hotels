@@ -20,6 +20,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems:"center",
         justifyContent:"center",
         flexDirection: "column",
+        [theme.breakpoints.up('767')] : {
+            display:'grid',
+            gridTemplateColumns:'repeat(2,1fr)'
+        },
+        [theme.breakpoints.up('1024')] : {
+            display:'grid',
+            gridTemplateColumns:'repeat(3,1fr)'
+        }
     }
 }))
 

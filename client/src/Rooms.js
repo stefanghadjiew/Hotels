@@ -33,7 +33,9 @@ const useStyles = makeStyles((theme) =>({
     room : {
         position: 'relative',
         display: 'flex',
-        marginBottom:'2.5vw',
+        '&:not(:last-child)':{
+            marginBottom:'2.5vw',
+        },
         width:'100%',
         height:'50vh',
         backgroundSize:'cover',
@@ -139,7 +141,7 @@ const Rooms = () => {
                         <FormControlLabel checked={checkedPets}   value={state.pets} control={<Radio onClick={handlePetsClick}/>} label="pets"/>
                     </FormControl>
                 </div>
-                {roomsToRender.length == 0 && <div>No match found...</div>}
+                {roomsToRender.length == 0 && <div style={{textAlign:'center'}}><h1>No match found...</h1></div>}
                 {roomsToRender}
             </div> 
         )

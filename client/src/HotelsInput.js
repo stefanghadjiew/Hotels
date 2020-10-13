@@ -19,8 +19,8 @@ const HotelsInput = ({input,data,getHotelName,getPrice,getLocation,value}) => {
     }
     
     return (
-        <FormControl  style={{maxWidth:250}}>
-            <InputLabel id={`${input}`} style={{margin:'2.5vw 0'}}>{input}</InputLabel>
+        <FormControl  style={{minWidth:250}}>
+            <InputLabel fullWidht="true" id={`${input}`} >{input}</InputLabel>
             <Select
             value={value}
             onChange={handleChange}

@@ -16,18 +16,29 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         flexDirection:'column',
         margin:'1rem',
-        justifyContent:'center'
+        height:'content-fit',
+        justifyContent:'center',
+        alignItems:'center'
     },
-    cardContainer:{
-        minHeight:"50vh",
+    card:{
+        maxWidth:'100vw',
+        margin:'0 1.5vw',
         textAlign:"center",
         letterSpacing:"1px",
         backgroundColor:"transparent",
         display: "flex",
         alignItems:"center",
+        flexDirection:'column',
         justifyContent:"center",
-        flexDirection: "column",
-    }
+        [theme.breakpoints.up('767')] : {
+            display:'grid',
+            gridTemplateColumns:'repeat(2,1fr)'
+        },
+        [theme.breakpoints.up('1024')] : {
+            gridTemplateColumns:'repeat(3,1fr)'
+        }
+    },
+    
 }))
 
 const Hotels = () => {
@@ -70,13 +81,14 @@ const Hotels = () => {
                 <HotelsInput value={price} getPrice={getPrice} input="Starting Price" data={hotelsPrices}/>
                 <HotelsInput value={location} getLocation={getLocation} input="Location" data={hotelsLocation}/>
             </div>
-            <div className={classes.cardContainer}>
-                {hotelName ? <div>{renderByName}</div> : null}
-                {hotelName === "All" && <div>{renderAllHotels}</div>}
-                {price ?  <div>{renderByPrice}</div> : null}
-                {location ? <div>{renderByLocation}</div> : null}
-                {!(hotelName || price || location) ? <div>{renderAllHotels}</div> : null}
-            </div> 
+            <div className={classes.wrapper}>
+                {hotelName ? <div className={classes.card}>{renderByName}</div> : null}
+                {hotelName === "All" && <div className={classes.card}>{renderAllHotels}</div>}
+                {price ?  <div className={classes.card}>{renderByPrice}</div> : null}
+                {location ? <div className={classes.card}>{renderByLocation}</div> : null}
+                {!(hotelName || price || location) ? <div className={classes.card}>{renderAllHotels}</div> : null}
+            </div>
+            
         </>
     )
 

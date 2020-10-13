@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) =>({
     first : {
         height : "100vh",
+        paddingTop:'60px',
         backgroundImage: `url(${homeImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) =>({
     },
     second : {
         backgroundColor:"rgba(89,89,89,0.7)",
-        width:"60%",
+        minWidth:"60%",
         margin:"1rem",
         padding:"1rem"
     },
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) =>({
     button : {
         color:"black",
         backgroundColor:"#51e2f5",
+        width:'250px',
         fontWeight:"bold",
         letterSpacing:"2px",
         '&:hover':{

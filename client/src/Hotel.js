@@ -6,6 +6,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import { Link } from 'react-router-dom';
 import Button from "@material-ui/core/Button";
 import Reviews from './Reviews';
+import Error from './Error';
 const useStyles = makeStyles((theme) => ({
     displayHotel : {
         backgroundSize:'cover',
@@ -56,6 +57,12 @@ const useStyles = makeStyles((theme) => ({
 const Hotel = () => {
     const {allHotels} = useHotels()
     const classes = useStyles()
+    if(isNaN(parseInt(window.location.href.split('/').pop() ))) {
+        return (<Error/>)
+    }
+    if(parseInt(window.location.href.split('/').pop()) < 0 || parseInt(window.location.href.split('/').pop()) > 10) {
+        return (<Error/>)
+    }
     const hotelToRenderId =parseInt(window.location.href.split('/').pop()) 
     const hotelToRender = allHotels.filter(hotel =>(hotel.id === hotelToRenderId))[0]
     

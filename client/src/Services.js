@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
         boxShadow:"2px 3px 4px 4px black",
         [theme.breakpoints.up('360')] : {
             maxWidth:'320px'
+        },
+        [theme.breakpoints.up('767')] : {
+            maxWidth:'100%',
         }
     },
     cardContainer:{
@@ -41,6 +44,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems:"center",
         justifyContent:"center",
         flexDirection: "column",
+        [theme.breakpoints.up('767')] : {
+            display:'grid',
+            gridTemplateColumns:'repeat(2,1fr)'
+        },
+        [theme.breakpoints.up('1024')] : {
+            display:'grid',
+            gridTemplateColumns:'repeat(4,1fr)'
+        }
     }
 }))
 
