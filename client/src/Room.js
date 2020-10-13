@@ -10,6 +10,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import {Button} from '@material-ui/core';
 import Error from './Error';
+import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     roomWrapper : {
         display: 'flex',
@@ -145,7 +146,9 @@ const Room = () => {
                     </Typography>    
                 </div>
                 <div className={classes.buttonWrapper}>
-                    <Button className={classes.button}>Book Room</Button>
+                    <Link style={{textDecoration:'none'}} to={`/hotels/${currentHotelId}/rooms/${currentHotelRoomId}/book`}>
+                        <Button className={classes.button}>Book Room</Button>
+                    </Link>
                 </div>
             </div>
         )

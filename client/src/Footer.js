@@ -10,13 +10,14 @@ import {Button} from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     footer: {
         width: '100%',
-        height: 'fit-content',
+        height: '20vh',
         backgroundColor:'#283747 ',
         display:'grid',
         gridTemplateColumns:'repeat(3,1fr)',
         [theme.breakpoints.down('1024')] : {
             display:'grid',
-            gridTemplateColumns:'repeat(1,1fr)'
+            gridTemplateColumns:'repeat(1,1fr)',
+            height:'fit-content'
         }
     },
     phoneSupport:{
