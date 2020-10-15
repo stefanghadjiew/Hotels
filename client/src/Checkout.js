@@ -87,7 +87,7 @@ const CheckoutForm = () => {
             }
         }
         try{
-            const paymentIntent = await axios.post('http://localhost:8080/checkout',{amount:finalPrice * 100})
+            const paymentIntent = await axios.post('https://stark-retreat-23662.herokuapp.com/checkout',{amount:finalPrice * 100})
             const paymentMethod = await stripe.createPaymentMethod({
                 type:'card',
                 card : elements.getElement(CardElement),
