@@ -115,7 +115,7 @@ const Rooms = () => {
                 >
                     <div className={classes.overlay}></div>
                     <div>
-                        <Link style={{textDecoration:'none'}} to={`/hotels/${id}/rooms/${room.id}`}>
+                        <Link style={{textDecoration:'none'}} to={`/Hotels/all/${id}/rooms/${room.id}`}>
                             <Btn text="Room" stl={(hovered) ? {opacity:1} : {opacity:0}}/>
                         </Link>
                     </div>

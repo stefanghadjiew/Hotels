@@ -60,8 +60,8 @@ const Navbar = () => {
                 <Drawer anchor={'top'} open={isOpen} onClose={handleMenu}>
                      <List>
                         {[
-                            {text:'Home',icon:<HomeIcon/>,link:'/'},
-                            {text:'Hotels',icon:<HotelIcon/>,link:'/hotels'},
+                            {text:'Home',icon:<HomeIcon/>,link:'/Hotels'},
+                            {text:'Hotels',icon:<HotelIcon/>,link:'/Hotels/all'},
                             {text:'Reservations',icon:<DoneOutlineIcon/>,link:'/reservations'}
                         ].map((item,index) => (
                             <Link key={index} to={`${item.link}`} className={classes.link}>

@@ -25,7 +25,7 @@ const HotelCard = ({hotel}) => {
             className={classes.card} 
             style={{backgroundImage:`url(${hotel.img})`}}>
                 <CardContent style={{display:"flex",flexDirection:"column",padding:0}}>
-                    <Link style={{textDecoration:'none'}} to={`/hotels/${hotel.id}`}>
+                    <Link style={{textDecoration:'none'}} to={`/Hotels/all/${hotel.id}`}>
                         <Btn text="Take Me There" stl={{ width:'100%'}}/>
                     </Link>
                     <div style={{height:"50px",width:"70px",backgroundColor:"black",color:"white",borderBottomRightRadius:"20px"}}>{hotel.price}<br/> <span style={{fontSize:"xx-small"}}>per night</span></div>

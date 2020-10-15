@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react';
 import Btn from './Button';
 import {makeStyles} from '@material-ui/core';
 import 'date-fns';
-import {useHistory as history} from 'react-router-dom';
 import DateFnsUtils from '@date-io/date-fns';
 import {
     MuiPickersUtilsProvider,
