@@ -2,15 +2,9 @@ import React  from 'react';
 import { makeStyles } from '@material-ui/core';
 import HotelCard from './HotelCard';
 import { useHotels } from './DatabaseContext';
-
+import BottomBorder from './BottomBorder';
 
 const useStyles = makeStyles((theme) => ({
-    bottomBorder : {
-        backgroundColor:"#F4D03F",
-        height:"5px",
-        width:"25%",
-        margin:"1.5rem auto"
-    },
     cardContainer:{
         minHeight:"50vh",
         textAlign:"center",
@@ -41,7 +35,7 @@ const HomeHotels = () => {
     return(
         <div style={{textAlign:"center"}}>
         <h1 style={{padding:"1rem",fontWeight:"900"}}>Crown Jewels</h1>
-            <div className={classes.bottomBorder}></div>
+            <BottomBorder/>
             <div className={classes.cardContainer}>
                 {renderHotels}
             </div>

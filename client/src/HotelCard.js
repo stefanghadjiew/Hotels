@@ -2,20 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
+import Btn from './Button';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) =>({
-    button : {
-        color:"black",
-        backgroundColor:"#51e2f5", 
-        fontWeight:"bold",
-        letterSpacing:"2px",
-        width:'100%',
-        '&:hover':{
-            backgroundColor:'#2E86C1'
-        }
-    },
     card : {
         backgroundSize:"cover",
         backgroundPosition:"center",
@@ -36,7 +26,7 @@ const HotelCard = ({hotel}) => {
             style={{backgroundImage:`url(${hotel.img})`}}>
                 <CardContent style={{display:"flex",flexDirection:"column",padding:0}}>
                     <Link style={{textDecoration:'none'}} to={`/hotels/${hotel.id}`}>
-                        <Button size="large" variant="contained" className={classes.button}>Take Me There</Button>
+                        <Btn text="Take Me There" stl={{ width:'100%'}}/>
                     </Link>
                     <div style={{height:"50px",width:"70px",backgroundColor:"black",color:"white",borderBottomRightRadius:"20px"}}>{hotel.price}<br/> <span style={{fontSize:"xx-small"}}>per night</span></div>
                     <div style={{backgroundColor:"#F4D03F",marginTop:"100%"}}>

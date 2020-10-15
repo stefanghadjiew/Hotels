@@ -10,14 +10,9 @@ import LanguageIcon from '@material-ui/icons/Language';
 import WifiIcon from '@material-ui/icons/Wifi';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import AccessibleIcon from '@material-ui/icons/Accessible';
-
+import BottomBorder from './BottomBorder';
 const useStyles = makeStyles((theme) => ({
-    bottomBorder : {
-        backgroundColor:"#F4D03F",
-        height:"5px",
-        width:"25%",
-        margin:"1.5rem auto"
-    },
+   
     icon : {
         height:"50px",
         width:"50px"
@@ -119,7 +114,7 @@ const Services = () => {
     return (
         <div style={{backgroundColor:"#51e2f5",textAlign:"center"}}>
         <h1 style={{padding:"1rem",fontWeight:"900"}}>Services</h1>
-        <div className={classes.bottomBorder}></div>
+        <BottomBorder/>
         <div className={classes.cardContainer}>
             {renderServices}
         </div>

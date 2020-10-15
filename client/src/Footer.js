@@ -6,7 +6,8 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import {TextField} from '@material-ui/core';
-import {Button} from '@material-ui/core';
+import Btn from './Button';
+import BottomBorder from './BottomBorder';
 const useStyles = makeStyles((theme) => ({
     footer: {
         width: '100%',
@@ -44,21 +45,8 @@ const useStyles = makeStyles((theme) => ({
     },
     mailWrapper: {
         display: 'flex',
-       justifyContent:'center',
-       marginBottom:'2.5vw'
-    },
-    button : {
-        color:"black",
-        borderRadius:'0',
-        backgroundColor:"#51e2f5", 
-        fontWeight:"bold",
-        letterSpacing:"2px",
-        marginTop:'1.5vw',
-        height:'50px',
-        maxWidth:'200px',
-        '&:hover':{
-            backgroundColor:'#2E86C1'
-        }
+        justifyContent:'center',
+        marginBottom:'2.5vw',
     },
     copyright : {
         display:'flex',
@@ -69,20 +57,13 @@ const useStyles = makeStyles((theme) => ({
         margin:'1vw',
         textAlign:'center'
     },
-    bottomBorder : {
-        backgroundColor:"#F4D03F",
-        height:"5px",
-        width:"25%",
-        margin:"1.5rem auto"
-    },
-
 }))
 
 const Footer = () => {
     const classes = useStyles()
     return (
         <>
-        <div className={classes.bottomBorder}></div>
+        <BottomBorder/>
         <div className={classes.footer}>
             <div className={classes.phoneSupport}>
                 <h2>Phone Support</h2>
@@ -106,7 +87,7 @@ const Footer = () => {
                 <div className={classes.mailWrapper}>
                     <TextField style={{marginTop:'1.5vw',
                     backgroundColor:'#fff',maxWidth:'320px',height:'50px'}} id="outlined-basic" label="E-mail" variant="filled" />
-                    <Button size="large" variant="contained" className={classes.button} >Subscribe</Button>
+                    <Btn text="Subscribe"stl={{borderRadius:'0',maxWidth:'200px',height:'50px',marginTop:'1.5vw'}}/>
                 </div>
             </div>
         </div>

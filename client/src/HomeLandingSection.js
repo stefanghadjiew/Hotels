@@ -1,8 +1,9 @@
 import React from 'react';
 import homeImage  from "./images/hotels/homeImage.jpg";
-import Button from "@material-ui/core/Button";
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
+import Btn from './Button';
+import BottomBorder from './BottomBorder';
 
 const useStyles = makeStyles((theme) =>({
     first : {
@@ -26,22 +27,8 @@ const useStyles = makeStyles((theme) =>({
         margin:"1rem",
         padding:"1rem"
     },
-    bottomBorder : {
-        backgroundColor:"#F4D03F",
-        height:"5px",
-        width:"25%",
-        margin:"1.5rem auto"
-    },
-    button : {
-        color:"black",
-        backgroundColor:"#51e2f5",
-        width:'250px',
-        fontWeight:"bold",
-        letterSpacing:"2px",
-        '&:hover':{
-            backgroundColor:'#2E86C1'
-        }
-    }
+  
+   
 }))
 
 const HomeLandingSection = () => {
@@ -50,9 +37,9 @@ const HomeLandingSection = () => {
         <div className={classes.first}>
         <div className={classes.second}>
             <h1 style={{letterSpacing:'2px',fontFamily:'sans-serif'}}>Time to find the hotel that will fulfil your every desire</h1>
-            <div className={classes.bottomBorder}></div>
+            <BottomBorder/>
             <Link style={{textDecoration:'none'}} to="/hotels">
-                <Button size="large" variant="contained" className={classes.button}>Hotels</Button>
+                <Btn text="Hotels"/>
             </Link>
         </div>
     </div>

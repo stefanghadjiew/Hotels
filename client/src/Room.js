@@ -8,9 +8,10 @@ import PetsIcon from '@material-ui/icons/Pets';
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import {Button} from '@material-ui/core';
+import Btn from './Button';
 import Error from './Error';
 import {Link} from 'react-router-dom';
+import BottomBorder from './BottomBorder';
 const useStyles = makeStyles((theme) => ({
     roomWrapper : {
         display: 'flex',
@@ -30,12 +31,6 @@ const useStyles = makeStyles((theme) => ({
         width: '50px',
         height: '50px',
         color:'#51E2F5'
-    },
-    bottomBorder:{
-        backgroundColor:"#F4D03F",
-        height:"5px",
-        width:"25%",
-        margin:"1.5rem auto"
     },
     services : {
         display: 'flex',
@@ -62,15 +57,6 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         flexDirection:'column',
         marginBottom:'2.5vw'
-    },
-    button : {
-        width:'250px',
-        fontWeight:"bold",
-        backgroundColor:"#51e2f5",
-        '&:hover':{
-            backgroundColor:'#2E86C1'
-        },
-        margin:'2.5vw 0 auto'
     },
     buttonWrapper : {
         display:'flex',
@@ -100,7 +86,7 @@ const Room = () => {
             <div className={classes.roomWrapper}>
                 <div className={classes.room} style={{backgroundImage:`url(${currentHotelRoom[0].img})`}}></div>
                 <h1>Info</h1>
-                <div className={classes.bottomBorder}></div>
+                <BottomBorder/>
                 <div className={classes.info}>
                     <Typography>
                         Size : {currentHotelRoom[0].SQFT}
@@ -113,7 +99,7 @@ const Room = () => {
                     </Typography>
                 </div>
                 <h1>Services</h1>
-                <div className={classes.bottomBorder}></div>
+                <BottomBorder/>
                 <div className={classes.services}>
                     <Tooltip title="room service" arrow placement="top">
                         <RoomServiceIcon className={classes.icon}/>
@@ -140,14 +126,14 @@ const Room = () => {
                 </div>
                 <div className={classes.details}>
                     <h1>Details</h1>
-                    <div className={classes.bottomBorder}></div>
+                    <BottomBorder/>
                     <Typography>
                         {currentHotelRoom[0].details}
                     </Typography>    
                 </div>
                 <div className={classes.buttonWrapper}>
                     <Link style={{textDecoration:'none'}} to={`/hotels/${currentHotelId}/rooms/${currentHotelRoomId}/book`}>
-                        <Button className={classes.button}>Book Room</Button>
+                        <Btn text="Book Room" stl={{marginTop:'1.5vw'}}/>
                     </Link>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import { useHotels } from './DatabaseContext';
 import { makeStyles } from '@material-ui/core';
-import { Button } from '@material-ui/core';
+import Btn from './Button';
 import RoomsInput from './RoomsInput';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -42,20 +42,6 @@ const useStyles = makeStyles((theme) =>({
         backgroundPosition:'center',
         justifyContent: 'center',
         alignItems:'center',
-        '&:hover button' : {
-            opacity:'1'
-        },
-    },
-    button: {
-        zIndex:'101',
-        width:'200px',
-        backgroundColor:"#51e2f5", 
-        fontWeight:"bold",
-        opacity:'0',
-        transition:'all 0.5s',
-        '&:hover':{
-            backgroundColor:'#2E86C1'
-        },
     },
     inputWrapper : {
         display:'flex',
@@ -75,7 +61,7 @@ const Rooms = () => {
     })
     const [checkedBreakfast,setCheckedBreakfast] = useState(false)
     const [checkedPets,setCheckPets] = useState(false)
-   
+    const [hovered,setHovered] = useState(false)
     const classes = useStyles()
     const {allHotels} = useHotels()
     const urlArr = window.location.href.split('/')
@@ -120,11 +106,17 @@ const Rooms = () => {
             }
             
             const roomsToRender =rooms.map((room,index) => (
-                <div style={{backgroundImage:`url(${room.img})`}} key={index} className={classes.room}>
+                <div 
+                onMouseEnter={()=>{setHovered(true)}} 
+                style={{backgroundImage:`url(${room.img})`}} 
+                key={index} 
+                className={classes.room}
+                onMouseLeave={()=>{setHovered(false)}}
+                >
                     <div className={classes.overlay}></div>
                     <div>
                         <Link style={{textDecoration:'none'}} to={`/hotels/${id}/rooms/${room.id}`}>
-                            <Button className={classes.button}>Room</Button>
+                            <Btn text="Room" stl={(hovered) ? {opacity:1} : {opacity:0}}/>
                         </Link>
                     </div>
                 </div>
@@ -141,7 +133,7 @@ const Rooms = () => {
                         <FormControlLabel checked={checkedPets}   value={state.pets} control={<Radio onClick={handlePetsClick}/>} label="pets"/>
                     </FormControl>
                 </div>
-                {roomsToRender.length == 0 && <div style={{textAlign:'center'}}><h1>No match found...</h1></div>}
+                {roomsToRender.length === 0 && <div style={{textAlign:'center'}}><h1>No match found...</h1></div>}
                 {roomsToRender}
             </div> 
         )

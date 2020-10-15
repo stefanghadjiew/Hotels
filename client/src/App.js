@@ -8,7 +8,9 @@ import Rooms from './Rooms';
 import Room from "./Room";
 import Error from "./Error";
 import Footer from './Footer';
-import BookRoom from './BookRoom';
+import Checkout from './Checkout';
+import SuccessPay from './SuccessPay';
+import ErrorPay from './ErrorPay';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route exact path="/hotels/:hotelId"  component={Hotel}/>
         <Route exact path="/hotels/:hotelId/rooms" component={Rooms}/> 
         <Route exact path ="/hotels/:hotelId/rooms/:roomId" component={Room}/>
-        <Route exact path ="/hotels/:hotelId/rooms/:roomId/book" component={BookRoom}/>
+        <Route exact path ="/hotels/:hotelId/rooms/:roomId/book" component={Checkout}/>
+        <Route exact path ="/successpay" component={SuccessPay}/> 
+        <Route exact path ="/errorpay" component={ErrorPay}/> 
         <Route component={Error}/> 
       </Switch>
     <Footer/>

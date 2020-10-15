@@ -4,9 +4,10 @@ import { useHotels } from './DatabaseContext';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import EmailIcon from '@material-ui/icons/Email';
 import { Link } from 'react-router-dom';
-import Button from "@material-ui/core/Button";
+import Btn from './Button';
 import Reviews from './Reviews';
 import Error from './Error';
+import BottomBorder from './BottomBorder';
 const useStyles = makeStyles((theme) => ({
     displayHotel : {
         backgroundSize:'cover',
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     description : {
         width: '95vw',
         textAlign:'center',
+        marginBottom:'1.5rem'
     },
     h1 : {
         textTransform: 'capitalize',
@@ -28,28 +30,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection:'column',
         textAlign: 'center'
     },
-    bottomBorder : {
-        backgroundColor:"#F4D03F",
-        height:"5px",
-        width:"25%",
-        margin:"1.5rem auto"
-    },
     iconContainer : {
         display:'flex',
         justifyContent:'center',
         verticalAlign:'middle'
-    },
-    button : {
-        color:"black",
-        backgroundColor:"#51e2f5", 
-        fontWeight:"bold",
-        letterSpacing:"2px",
-        margin:'1.5rem 0 0',
-        width:'100%',
-        maxWidth:'250px',
-        '&:hover':{
-            backgroundColor:'#2E86C1'
-        }
     }
 }))
 
@@ -74,7 +58,7 @@ const Hotel = () => {
         return (
             <div style={{margin:'0 2.5vw 2.5vw',textAlign:'center'}}>
                 <div className={classes.displayHotel} style={{backgroundImage:`url(${hotelToRender.img})`}}></div>
-                <div className={classes.bottomBorder}></div>
+                <BottomBorder/>
                 <div className={classes.info}>
                     Prices from : {hotelToRender.price}<br/>
                     Location : {hotelToRender.location}<br/>
@@ -87,17 +71,17 @@ const Hotel = () => {
                         <PhoneAndroidIcon/> : {hotelToRender.contacts.phone}
                     </div>
                 </div>
-                <div className={classes.bottomBorder}></div>
+                <BottomBorder/>
                 <div className={classes.description}>
                     <h1 className={classes.h1}>{hotelToRender.name}</h1>
                     {hotelToRender.description}
                 </div>
                 <div >
                     <Link style={{textDecoration:'none'}} to={`/hotels/${hotelToRenderId}/rooms`}>
-                        <Button  variant="contained" className={classes.button}>Rooms</Button>
+                        <Btn text="Rooms"/>
                     </Link>
                 </div>
-                <div className={classes.bottomBorder}></div>
+                <BottomBorder/>
                 <h1 style={{margin:'3.5vw 0'}}>Reviews</h1>
                 <Reviews hotelToRender={ hotelToRender }/> 
             </div> 
