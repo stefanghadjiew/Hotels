@@ -77,7 +77,7 @@ const Navbar = () => {
             )} 
             <nav className={classes.nav}>
                 <div className={classes.logo}>
-                    <Link to="/" style={{textDecoration:"none",letterSpacing:"3px"}}>
+                    <Link to="/Hotels" style={{textDecoration:"none",letterSpacing:"3px"}}>
                         <span style={{color:"#51e2f5"}}>
                             Dream
                         </span>

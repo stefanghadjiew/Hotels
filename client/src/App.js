@@ -18,11 +18,11 @@ function App() {
     <Navbar/>
       <Switch>
         <Route exact path="/Hotels" component={Home}/>
-        <Route exact path="/hotels" component={Hotels}/>
-        <Route exact path="/hotels/:hotelId"  component={Hotel}/>
-        <Route exact path="/hotels/:hotelId/rooms" component={Rooms}/> 
-        <Route exact path ="/hotels/:hotelId/rooms/:roomId" component={Room}/>
-        <Route exact path ="/hotels/:hotelId/rooms/:roomId/book" component={Checkout}/>
+        <Route exact path="/Hotels/all" component={Hotels}/>
+        <Route exact path="/Hotels/all/:hotelId"  component={Hotel}/>
+        <Route exact path="/Hotels/all/:hotelId/rooms" component={Rooms}/> 
+        <Route exact path ="/Hotels/all/:hotelId/rooms/:roomId" component={Room}/>
+        <Route exact path ="/Hotels/all/:hotelId/rooms/:roomId/book" component={Checkout}/>
         <Route exact path ="/successpay" component={SuccessPay}/> 
         <Route exact path ="/errorpay" component={ErrorPay}/> 
         <Route component={Error}/> 
