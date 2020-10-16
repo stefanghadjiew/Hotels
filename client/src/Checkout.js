@@ -99,9 +99,9 @@ const CheckoutForm = () => {
                 payment_method:paymentMethod.paymentMethod.id
             })
             setIsProcessing(false)
-            window.location.href = `/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
+            window.location.href = `/Hotels/#/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
         } catch(err){
-            window.location.href = `/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
+            window.location.href = `Hotels/#/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
         }
        
     }
