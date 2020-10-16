@@ -25,7 +25,7 @@ const ErrorPay = () => {
         <div className={classes.wrapper}>
             <h1 style={{color:'#E74C3C'}}>Something went wrong...</h1>
             <CloseIcon className={classes.icon}/>
-            <Link to="/Hotels" style={{textDecoration:'none'}}>
+            <Link to="/" style={{textDecoration:'none'}}>
                 <Btn text="Homepage"/>
             </Link>
         </div>
