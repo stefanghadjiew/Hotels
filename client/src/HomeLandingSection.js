@@ -38,7 +38,7 @@ const HomeLandingSection = () => {
         <div className={classes.second}>
             <h1 style={{letterSpacing:'2px',fontFamily:'sans-serif'}}>Time to find the hotel that will fulfil your every desire</h1>
             <BottomBorder/>
-            <Link style={{textDecoration:'none'}} to="/all">
+            <Link style={{textDecoration:'none'}} to="/Hotels/all">
                 <Btn text="Hotels"/>
             </Link>
         </div>

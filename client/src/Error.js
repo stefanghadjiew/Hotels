@@ -31,7 +31,7 @@ const Error = () => {
         <div className={classes.errorWrapper}>
             <div className={classes.error}>
                 <h1>Page Not Found</h1>
-                <Link to="/" style={{textDecoration: 'none'}}>
+                <Link to="/Hotels" style={{textDecoration: 'none'}}>
                     <Button className={classes.button}>Back to Homepage</Button>
                 </Link>
             </div>
