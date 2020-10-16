@@ -99,9 +99,9 @@ const CheckoutForm = () => {
                 payment_method:paymentMethod.paymentMethod.id
             })
             setIsProcessing(false)
-            window.location.pathname = '/Hotels/successpay'
+            window.location.pathname = '/successpay'
         } catch(err){
-            window.location.pathname = '/Hotels/errorpay'
+            window.location.pathname = '/errorpay'
         }
        
     }

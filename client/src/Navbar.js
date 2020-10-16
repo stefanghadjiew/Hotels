@@ -60,8 +60,8 @@ const Navbar = () => {
                 <Drawer anchor={'top'} open={isOpen} onClose={handleMenu}>
                      <List>
                         {[
-                            {text:'Home',icon:<HomeIcon/>,link:'/Hotels'},
-                            {text:'Hotels',icon:<HotelIcon/>,link:'/Hotels/all'},
+                            {text:'Home',icon:<HomeIcon/>,link:'/'},
+                            {text:'Hotels',icon:<HotelIcon/>,link:'/all'},
                             {text:'Reservations',icon:<DoneOutlineIcon/>,link:'/reservations'}
                         ].map((item,index) => (
                             <Link key={index} to={`${item.link}`} className={classes.link}>
@@ -77,7 +77,7 @@ const Navbar = () => {
             )} 
             <nav className={classes.nav}>
                 <div className={classes.logo}>
-                    <Link to="/Hotels" style={{textDecoration:"none",letterSpacing:"3px"}}>
+                    <Link to="/" style={{textDecoration:"none",letterSpacing:"3px"}}>
                         <span style={{color:"#51e2f5"}}>
                             Dream
                         </span>

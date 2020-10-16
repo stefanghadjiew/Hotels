@@ -25,7 +25,7 @@ const SuccessPay = () => {
         <div className={classes.wrapper}>
         <h1 style={{color:'#82E0AA'}}>Payment<br/> successful</h1>
         <CheckIcon className={classes.icon}/>
-        <Link to="/Hotels" style={{textDecoration:'none'}}>
+        <Link to="/" style={{textDecoration:'none'}}>
             <Btn text="Homepage"/>
         </Link>
     </div>

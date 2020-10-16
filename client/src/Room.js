@@ -132,7 +132,7 @@ const Room = () => {
                     </Typography>    
                 </div>
                 <div className={classes.buttonWrapper}>
-                    <Link style={{textDecoration:'none'}} to={`/Hotels/all/${currentHotelId}/rooms/${currentHotelRoomId}/book`}>
+                    <Link style={{textDecoration:'none'}} to={`/all/${currentHotelId}/rooms/${currentHotelRoomId}/book`}>
                         <Btn text="Book Room" stl={{marginTop:'1.5vw'}}/>
                     </Link>
                 </div>

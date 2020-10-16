@@ -77,7 +77,7 @@ const Hotel = () => {
                     {hotelToRender.description}
                 </div>
                 <div >
-                    <Link style={{textDecoration:'none'}} to={`/Hotels/all/${hotelToRenderId}/rooms`}>
+                    <Link style={{textDecoration:'none'}} to={`/all/${hotelToRenderId}/rooms`}>
                         <Btn text="Rooms"/>
                     </Link>
                 </div>
