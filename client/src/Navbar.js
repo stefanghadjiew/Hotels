@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) =>({
         fontSize: "1.5rem"
     },
     button : {
-       [theme.breakpoints.up("541")]: {
+       [theme.breakpoints.up(541)]: {
            display:'none'
        },
         '&:hover' : {
@@ -43,7 +43,21 @@ const useStyles = makeStyles((theme) =>({
     },
     link : {
         textDecoration:'none',
-        color:'inherit'
+        color:'inherit',
+        transition:'.3s ease',
+        '&:hover':{
+            color:'#F4D03F'
+        }
+    },
+    menu : {
+        [theme.breakpoints.down(541)] : {
+            display:'none'
+        },
+        width: "50%",
+        display:'flex',
+        alignItems: "center",
+        justifyContent:'space-evenly',
+        
     }
 }))
 
@@ -57,8 +71,8 @@ const Navbar = () => {
     return (
         <>
             {isOpen && ( 
-                <Drawer anchor={'top'} open={isOpen} onClose={handleMenu}>
-                     <List>
+                <Drawer  anchor={'top'} open={isOpen} onClose={handleMenu}>
+                     <List  style={{backgroundColor:'#51e2f5'}}>
                         {[
                             {text:'Home',icon:<HomeIcon/>,link:'/Hotels'},
                             {text:'Hotels',icon:<HotelIcon/>,link:'/Hotels/all'},
@@ -77,7 +91,7 @@ const Navbar = () => {
             )} 
             <nav className={classes.nav}>
                 <div className={classes.logo}>
-                    <Link to="/Hotels" style={{textDecoration:"none",letterSpacing:"3px"}}>
+                    <Link to="/" style={{textDecoration:"none",letterSpacing:"3px"}}>
                         <span style={{color:"#51e2f5"}}>
                             Dream
                         </span>
@@ -91,7 +105,17 @@ const Navbar = () => {
                         <SubjectIcon/>
                     </IconButton>
                 </div>
-                
+                <div className={classes.menu}>
+                    <Link to="/" className={classes.link}>
+                        <h4>Home</h4>
+                    </Link>
+                    <Link to="/Hotels/all" className={classes.link}>
+                        <h4>Hotels</h4>
+                    </Link>
+                    <Link to="/reservations" className={classes.link}>
+                        <h4>Reservations</h4>
+                    </Link>
+                </div>
             </nav>
         </>
     )
