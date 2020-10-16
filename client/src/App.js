@@ -23,8 +23,8 @@ function App() {
         <Route exact path="/Hotels/all/:hotelId/rooms" component={Rooms}/> 
         <Route exact path ="/Hotels/all/:hotelId/rooms/:roomId" component={Room}/>
         <Route exact path ="/Hotels/all/:hotelId/rooms/:roomId/book" component={Checkout}/>
-        <Route exact path ="/Hotels/successpay" component={SuccessPay}/> 
-        <Route exact path ="/Hotels/errorpay" component={ErrorPay}/> 
+        <Route exact path ="/Hotels/all/:hotelId/rooms/:roomId/book/successpay" component={SuccessPay}/> 
+        <Route exact path ="/Hotels/all/:hotelId/rooms/:roomId/book/errorpay" component={ErrorPay}/> 
         <Route component={Error}/> 
       </Switch>
     <Footer/>
