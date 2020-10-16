@@ -101,7 +101,7 @@ const CheckoutForm = () => {
             setIsProcessing(false)
             window.location.href = `/Hotels/#/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
         } catch(err){
-            window.location.href = `Hotels/#/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
+            window.location.href = `/Hotels/#/Hotels/all/${hotelId}/rooms/${roomId}/book/successpay`
         }
        
     }
