@@ -18,6 +18,8 @@ import {
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
+import { useHistory } from 'react-router-dom';
+
 
 const stripePromise = loadStripe('pk_test_51Hbr14I0gL9dBjcHkrfk0K7GphgypgL15NuYA7Gy0Gg3nqDKhH8kedq4KCk6hXgQ1DKfROs9KfE2K9JAunJwKzn400n5fel1Oi')
 
@@ -96,12 +98,10 @@ const CheckoutForm = () => {
             const confirmPayment = await stripe.confirmCardPayment(paymentIntent.data,{
                 payment_method:paymentMethod.paymentMethod.id
             })
-            console.log(paymentIntent)
-            console.log(paymentMethod)
             setIsProcessing(false)
-            window.location.replace('/Hotels/successpay')
+            window.location = '/Hotels/successpay'
         } catch(err){
-            window.location.replace('/Hotels/errorpay')
+            window.location = '/Hotels/errorpay'
         }
        
     }
