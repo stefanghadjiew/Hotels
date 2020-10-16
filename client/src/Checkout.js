@@ -59,8 +59,8 @@ const CheckoutForm = () => {
     const stripe = useStripe()
     const elements = useElements()
     const {allHotels} = useHotels()
-    const hotelId =parseInt(window.location.href.split('/')[5])
-    const roomId = parseInt(window.location.href.split('/')[7])
+    const hotelId =parseInt(window.location.href.split('/')[7])
+    const roomId = parseInt(window.location.href.split('/')[9])
     const hotel = allHotels.filter(hotel => (hotel.id === hotelId))[0]
     const classes=useStyles()
     const [checkIndate,setCheckInDate] = useState(null)
