@@ -99,9 +99,9 @@ const CheckoutForm = () => {
             console.log(paymentIntent)
             console.log(paymentMethod)
             setIsProcessing(false)
-            window.location.replace('/successpay')
+            window.location.replace('/Hotels/successpay')
         } catch(err){
-            window.location.replace('/errorpay')
+            window.location.replace('/Hotels/errorpay')
         }
        
     }
