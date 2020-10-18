@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Hotels/static/css/main.597a12e6.chunk.css",
-    "main.js": "/Hotels/static/js/main.bfcbbdcd.chunk.js",
-    "main.js.map": "/Hotels/static/js/main.bfcbbdcd.chunk.js.map",
+    "main.js": "/Hotels/static/js/main.b3e7d457.chunk.js",
+    "main.js.map": "/Hotels/static/js/main.b3e7d457.chunk.js.map",
     "runtime-main.js": "/Hotels/static/js/runtime-main.942eedf5.js",
     "runtime-main.js.map": "/Hotels/static/js/runtime-main.942eedf5.js.map",
     "static/js/2.d38d36c7.chunk.js": "/Hotels/static/js/2.d38d36c7.chunk.js",
     "static/js/2.d38d36c7.chunk.js.map": "/Hotels/static/js/2.d38d36c7.chunk.js.map",
     "index.html": "/Hotels/index.html",
-    "precache-manifest.f61f24f0aabd48ae1c3469eb44ae7ca4.js": "/Hotels/precache-manifest.f61f24f0aabd48ae1c3469eb44ae7ca4.js",
+    "precache-manifest.e9e91f8889d9759b49b08059a4cf4be8.js": "/Hotels/precache-manifest.e9e91f8889d9759b49b08059a4cf4be8.js",
     "service-worker.js": "/Hotels/service-worker.js",
     "static/css/main.597a12e6.chunk.css.map": "/Hotels/static/css/main.597a12e6.chunk.css.map",
     "static/js/2.d38d36c7.chunk.js.LICENSE.txt": "/Hotels/static/js/2.d38d36c7.chunk.js.LICENSE.txt",
@@ -73,6 +73,6 @@
     "static/js/runtime-main.942eedf5.js",
     "static/js/2.d38d36c7.chunk.js",
     "static/css/main.597a12e6.chunk.css",
-    "static/js/main.bfcbbdcd.chunk.js"
+    "static/js/main.b3e7d457.chunk.js"
   ]
 }
