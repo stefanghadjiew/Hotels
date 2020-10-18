@@ -127,7 +127,8 @@ const CheckoutForm = () => {
                         }} 
                         type="number" 
                         label="Days i wish to stay" 
-                        /><TextField
+                        />
+                        <TextField
                         required={true}
                         name="name"
                         type="text"

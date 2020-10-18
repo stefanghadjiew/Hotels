@@ -10,7 +10,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Drawer from '@material-ui/core/Drawer';
-import { makeStyles } from '@material-ui/core'; 
+import { makeStyles } from '@material-ui/core';
+import ErrorIcon from '@material-ui/icons/Error'; 
 
 
 const useStyles = makeStyles((theme) =>({
@@ -76,7 +77,7 @@ const Navbar = () => {
                         {[
                             {text:'Home',icon:<HomeIcon/>,link:'/'},
                             {text:'Hotels',icon:<HotelIcon/>,link:'/Hotels/all'},
-                            {text:'Reservations',icon:<DoneOutlineIcon/>,link:'/Hotels/reservations'}
+                            {text:'Error Page',icon:<DoneOutlineIcon/>,link:'/Hotels/reservations'}
                         ].map((item,index) => (
                             <Link key={index} to={`${item.link}`} className={classes.link}>
                                 <ListItem button key={index}>
@@ -106,15 +107,15 @@ const Navbar = () => {
                     </IconButton>
                 </div>
                 <div className={classes.menu}>
-                    <Link to="/" className={classes.link}>
-                        <h4>Home</h4>
+                    {[{text:'Home',icon:<HomeIcon/>,link : '/'},
+                      {text:'Hotels',icon:<HotelIcon/>,link : '/Hotels/all'},
+                      {text:'Error Page',icon:<ErrorIcon/>,link : '/error'}
+                ].map((item,index) =>(
+                    <Link key={index} to={`${item.link}`} className={classes.link} style={{display:'flex',alignItems:'center'}}>
+                        {item.icon}
+                        <h4>{item.text}</h4>
                     </Link>
-                    <Link to="/Hotels/all" className={classes.link}>
-                        <h4>Hotels</h4>
-                    </Link>
-                    <Link to="/reservations" className={classes.link}>
-                        <h4>Reservations</h4>
-                    </Link>
+                ))}
                 </div>
             </nav>
         </>
