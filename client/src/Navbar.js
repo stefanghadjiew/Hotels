@@ -74,7 +74,7 @@ const Navbar = () => {
                 <Drawer  anchor={'top'} open={isOpen} onClose={handleMenu}>
                      <List  style={{backgroundColor:'#51e2f5'}}>
                         {[
-                            {text:'Home',icon:<HomeIcon/>,link:'/Hotels'},
+                            {text:'Home',icon:<HomeIcon/>,link:'/'},
                             {text:'Hotels',icon:<HotelIcon/>,link:'/Hotels/all'},
                             {text:'Reservations',icon:<DoneOutlineIcon/>,link:'/Hotels/reservations'}
                         ].map((item,index) => (

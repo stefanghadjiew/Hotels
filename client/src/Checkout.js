@@ -27,14 +27,13 @@ const useStyles = makeStyles((theme) =>({
     wrapper : {
         paddingTop:'60px',
         width:'100vw',
-        height: 'calc(100vh - 5px - 3rem - 25vh - 2vw)',
+        height:'fit-content',
+        /* height: 'calc(100vh - 5px - 3rem - 25vh - 2vw)' */
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        [theme.breakpoints.down(600)] : {
-            height:'85vh'
-        }
+        
     },
     card : {
         height: '40px',
